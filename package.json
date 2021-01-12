@@ -1,8 +1,8 @@
 {
   "name": "test-vue-lib",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": false,
-  "main": "dist/vue-lib.js",
+  "main": "dist/vue-lib.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run build:lib",
