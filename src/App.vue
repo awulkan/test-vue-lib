@@ -1,26 +1,42 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="page">
+    <LeftPanel />
+    <main class="main">
+      <router-view/>
+    </main>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LeftPanel from './LeftPanel.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    LeftPanel,
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  margin: 0;
+}
+</style>
+
+<style scoped>
+.page {
+  display: flex;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.main {
+  flex: 1;
+  padding: 50px;
 }
 </style>
