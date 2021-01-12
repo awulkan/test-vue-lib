@@ -24,5 +24,16 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^7.0.0-0"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awulkan/test-vue-lib.git"
+  },
+  "author": "Alex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awulkan/test-vue-lib/issues"
+  },
+  "homepage": "https://github.com/awulkan/test-vue-lib#readme"
 }
