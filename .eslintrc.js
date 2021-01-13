@@ -57,7 +57,7 @@ module.exports = {
       'hoist': 'functions',
     }],
 
-    'vue/script-indent': 'error',
+    // 'vue/script-indent': 'error',
     'vue/attribute-hyphenation': 'error',
     'vue/html-end-tags': 'error',
     'vue/html-indent': 'error',

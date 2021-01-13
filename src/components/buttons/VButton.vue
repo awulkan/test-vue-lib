@@ -1,12 +1,12 @@
 <template>
   <button
     class="v-button"
-    :class="type"
+    :class="`v-button--${type}`"
     :disabled="disabled">
     <div
       v-if="spinner"
       class="v-button__spinner">
-      <VProgressCircular />
+      <VProgressCircular color="white" />
     </div>
     <div
       class="v-button__slot"
@@ -29,20 +29,13 @@ export default {
     disabled: Boolean,
     spinner: Boolean,
     type: {
-      type: Boolean,
-      required: true,
+      type: String,
+      required: false,
+      default: 'primary',
+      validator: (value) => ['primary', 'secondary', 'action', 'delete'].includes(value),
     },
   },
   setup(props) {
-    // const buttonType = computed(() => {
-    //   return {
-    //     action: props.type === 'action',
-    //     primary: props.type === 'primary',
-    //     secondary: props.type === 'secondary',
-    //   }
-    // })
-
-    return {}
   },
 }
 </script>
@@ -51,9 +44,9 @@ export default {
 .v-button {
   position: relative;
   height: 30px;
-  border: none;
+  border-width: 1.2px;
+  border-style: solid;
   padding: 0;
-  background-color: gainsboro;
   border-radius: 3px;
   cursor: pointer;
   outline: none;
@@ -67,12 +60,56 @@ export default {
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.85);
 }
 
-.v-button:hover {
+.v-button--primary {
+  color: var(--button-text-color);
+  background-color: var(--action-button-color);
+  border-color: var(--action-button-color);
 }
 
-.v-button:disabled {
-  background-color: #d1d1d1;
+.v-button--primary:hover {
+  background-color: var(--action-button-hover-color);
+  border-color: var(--action-button-hover-color);
+}
+
+.v-button--secondary {
+  color: var(--button-text-color);
+  background-color: var(--action-button-color);
+  border-color: var(--action-button-color);
+}
+
+.v-button--secondary:hover {
+  background-color: var(--action-button-hover-color);
+  border-color: var(--action-button-hover-color);
+}
+
+.v-button--action {
+  color: var(--button-text-color);
+  background-color: var(--action-button-color);
+  border-color: var(--action-button-color);
+}
+
+.v-button--action:hover {
+  background-color: var(--action-button-hover-color);
+  border-color: var(--action-button-hover-color);
+}
+
+.v-button--delete {
+  color: var(--button-text-color);
+  background-color: var(--action-button-color);
+  border-color: var(--action-button-color);
+}
+
+.v-button--delete:hover {
+  background-color: var(--action-button-hover-color);
+  border-color: var(--action-button-hover-color);
+}
+
+.v-button:disabled,
+.v-button:disabled:focus {
   cursor: default;
+  color: var(--disabled-button-text-color);
+  background-color: var(--disabled-button-color);
+  border-color: var(--disabled-button-color);
 }
 
 .v-button__slot--hidden {

@@ -1,0 +1,11 @@
+:root {
+
+  /* Buttons */
+  --button-text-color: #ffffff;
+
+  --action-button-color: #1789E6;
+  --action-button-hover-color: #45acff;
+
+  --disabled-button-text-color: #a1a1a1;
+  --disabled-button-color: #d7d7d7;
+}

@@ -1,7 +1,7 @@
 <template>
   <div class="column">
     <div class="title">Button</div>
-    <VButton>Default</VButton>
+    <VButton type="action">Action</VButton>
     <div class="title">Disabled button</div>
     <VButton disabled>Disabled</VButton>
     <div class="title">Loading button</div>

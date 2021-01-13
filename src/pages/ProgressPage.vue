@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="title">Loader</div>
+    <div class="title">Circular indeterminate</div>
     <div class="spinner-container">
       <VProgressCircular/>
     </div>
