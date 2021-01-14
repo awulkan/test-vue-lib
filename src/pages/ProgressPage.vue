@@ -22,6 +22,7 @@ export default {
 .title {
   margin-top: 15px;
   margin-bottom: 5px;
+  font-size: 18px;
 }
 
 .spinner-container {

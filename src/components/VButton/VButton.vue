@@ -6,7 +6,10 @@
     <div
       v-if="spinner"
       class="v-button__spinner">
-      <VProgressCircular color="white" />
+      <VProgressCircular
+        :max-height="'22px'"
+        :max-width="'22px'"
+        color="white" />
     </div>
     <div
       class="v-button__slot"
@@ -17,7 +20,6 @@
 </template>
 
 <script>
-// import { computed } from 'vue'
 import VProgressCircular from '../VProgressCircular/VProgressCircular.vue'
 
 export default {
@@ -35,8 +37,6 @@ export default {
       validator: (value) => ['primary', 'secondary', 'action', 'delete'].includes(value),
     },
   },
-  // setup(props) {
-  // },
 }
 </script>
 

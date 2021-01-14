@@ -1,6 +1,7 @@
 <template>
   <svg
     class="v-spinner"
+    :style="{maxWidth: maxWidth, maxHeight: maxHeight}"
     viewBox="0 0 50 50">
     <circle
       class="v-spinner__circle"
@@ -22,6 +23,16 @@ export default {
       required: false,
       default: '#7b7983',
     },
+    maxHeight: {
+      type: String,
+      required: false,
+      default: '40px',
+    },
+    maxWidth: {
+      type: String,
+      required: false,
+      default: '40px',
+    },
   },
 }
 </script>
@@ -29,8 +40,8 @@ export default {
 <style scoped>
 .v-spinner {
   animation: rotate 2s linear infinite;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .v-spinner__circle {
