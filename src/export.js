@@ -1,4 +1,4 @@
-import VButton from './components/buttons/VButton.vue'
-import VProgressCircular from './components/progress/VProgressCircular.vue'
+import VButton from './components/VButton/VButton.vue'
+import VProgressCircular from './components/VProgressCircular/VProgressCircular.vue'
 
 export { VButton, VProgressCircular }

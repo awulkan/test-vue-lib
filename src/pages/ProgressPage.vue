@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import VProgressCircular from '../components/progress/VProgressCircular.vue'
+import VProgressCircular from '../components/VProgressCircular/VProgressCircular.vue'
 
 export default {
   name: 'ProgressPage',

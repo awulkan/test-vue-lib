@@ -18,7 +18,7 @@
 
 <script>
 // import { computed } from 'vue'
-import VProgressCircular from '../progress/VProgressCircular.vue'
+import VProgressCircular from '../VProgressCircular/VProgressCircular.vue'
 
 export default {
   name: 'VButton',
@@ -35,8 +35,8 @@ export default {
       validator: (value) => ['primary', 'secondary', 'action', 'delete'].includes(value),
     },
   },
-  setup(props) {
-  },
+  // setup(props) {
+  // },
 }
 </script>
 
@@ -44,15 +44,14 @@ export default {
 .v-button {
   position: relative;
   height: 30px;
-  border-width: 1.2px;
-  border-style: solid;
+  border: none;
   padding: 0;
   border-radius: 3px;
   cursor: pointer;
   outline: none;
   user-select: none;
   white-space: nowrap;
-  transition-property: background-color, border;
+  transition-property: background-color;
   transition-duration: 100ms;
   transition-timing-function: ease-in-out;
   -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.85);
@@ -61,47 +60,39 @@ export default {
 }
 
 .v-button--primary {
-  color: var(--button-text-color);
-  background-color: var(--action-button-color);
-  border-color: var(--action-button-color);
+  color: var(--primary-button-text-color);
+  background-color: var(--primary-button-color);
 }
 
 .v-button--primary:hover {
-  background-color: var(--action-button-hover-color);
-  border-color: var(--action-button-hover-color);
+  background-color: var(--primary-button-hover-color);
 }
 
 .v-button--secondary {
-  color: var(--button-text-color);
-  background-color: var(--action-button-color);
-  border-color: var(--action-button-color);
+  color: var(--secondary-button-text-color);
+  background-color: var(--secondary-button-color);
 }
 
 .v-button--secondary:hover {
-  background-color: var(--action-button-hover-color);
-  border-color: var(--action-button-hover-color);
+  background-color: var(--secondary-button-hover-color);
 }
 
 .v-button--action {
-  color: var(--button-text-color);
+  color: var(--action-button-text-color);
   background-color: var(--action-button-color);
-  border-color: var(--action-button-color);
 }
 
 .v-button--action:hover {
   background-color: var(--action-button-hover-color);
-  border-color: var(--action-button-hover-color);
 }
 
 .v-button--delete {
-  color: var(--button-text-color);
-  background-color: var(--action-button-color);
-  border-color: var(--action-button-color);
+  color: var(--delete-button-text-color);
+  background-color: var(--delete-button-color);
 }
 
 .v-button--delete:hover {
-  background-color: var(--action-button-hover-color);
-  border-color: var(--action-button-hover-color);
+  background-color: var(--delete-button-hover-color);
 }
 
 .v-button:disabled,
@@ -109,7 +100,6 @@ export default {
   cursor: default;
   color: var(--disabled-button-text-color);
   background-color: var(--disabled-button-color);
-  border-color: var(--disabled-button-color);
 }
 
 .v-button__slot--hidden {
