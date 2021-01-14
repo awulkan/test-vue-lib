@@ -16,6 +16,6 @@
   --delete-button-color: #c13f3f;
   --delete-button-hover-color: #e94343;
 
-  --disabled-button-text-color: #a1a1a1;
+  --disabled-button-text-color: #000000;
   --disabled-button-color: #d7d7d7;
 }

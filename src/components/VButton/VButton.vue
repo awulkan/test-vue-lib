@@ -1,7 +1,7 @@
 <template>
   <button
     class="v-button"
-    :class="`v-button--${type}`"
+    :class="[`v-button--${type}`, {'v-button--circular': circular}]"
     :disabled="disabled">
     <div
       v-if="spinner"
@@ -30,6 +30,7 @@ export default {
   props: {
     disabled: Boolean,
     spinner: Boolean,
+    circular: Boolean,
     type: {
       type: String,
       required: false,
@@ -43,6 +44,9 @@ export default {
 <style scoped>
 .v-button {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 30px;
   border: none;
   padding: 0;
@@ -57,6 +61,12 @@ export default {
   -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.85);
   -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.85);
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.85);
+}
+
+.v-button.v-button--circular {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 30px;
 }
 
 .v-button--primary {
@@ -100,6 +110,11 @@ export default {
   cursor: default;
   color: var(--disabled-button-text-color);
   background-color: var(--disabled-button-color);
+}
+
+.v-button:disabled *,
+.v-button:disabled:focus * {
+  opacity: 0.3;
 }
 
 .v-button__slot--hidden {

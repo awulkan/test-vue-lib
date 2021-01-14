@@ -1,24 +1,55 @@
 <template>
   <div class="column">
     <div class="title">Action button</div>
-    <VButton type="action">Action</VButton>
+    <div class="row">
+      <VButton type="action">Action</VButton>
+      <VButton
+        type="action"
+        circular>⚡️</VButton>
+    </div>
 
     <div class="title">Primary button</div>
-    <VButton type="primary">Primary</VButton>
+    <div class="row">
+      <VButton type="primary">Primary</VButton>
+      <VButton
+        type="primary"
+        circular>⚡️</VButton>
+    </div>
 
     <div class="title">Secondary button</div>
-    <VButton type="secondary">Secondary</VButton>
+    <div class="row">
+      <VButton type="secondary">Secondary</VButton>
+      <VButton
+        type="secondary"
+        circular>⚡️</VButton>
+    </div>
 
     <div class="title">Delete button</div>
-    <VButton type="delete">Delete</VButton>
+    <div class="row">
+      <VButton type="delete">Delete</VButton>
+      <VButton
+        type="delete"
+        circular>⚡️</VButton>
+    </div>
 
     <div class="title">Disabled button</div>
-    <VButton disabled>Disabled</VButton>
+    <div class="row">
+      <VButton disabled>Disabled</VButton>
+      <VButton
+        circular
+        disabled>⚡️</VButton>
+    </div>
 
     <div class="title">Loading button</div>
-    <VButton
-      type="primary"
-      :spinner="true">Loading</VButton>
+    <div class="row">
+      <VButton
+        type="primary"
+        spinner>Loading</VButton>
+      <VButton
+        type="primary"
+        circular
+        spinner/>
+    </div>
   </div>
 </template>
 
@@ -38,5 +69,13 @@ export default {
   margin-top: 15px;
   margin-bottom: 5px;
   font-size: 18px;
+}
+
+.row {
+  display: flex;
+}
+
+.row > * {
+  margin-right: 15px;
 }
 </style>
